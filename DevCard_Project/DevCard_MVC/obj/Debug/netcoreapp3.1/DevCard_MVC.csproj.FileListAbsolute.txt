@@ -108,4 +108,5 @@ G:\PROJECT\.net core\DevCard\DevCard_Project\DevCard_MVC\bin\Debug\netcoreapp3.1
 G:\PROJECT\.net core\DevCard\DevCard_Project\DevCard_MVC\obj\Debug\netcoreapp3.1\DevCard_MVC.csproj.CoreCompileInputs.cache
 G:\PROJECT\.net core\DevCard\DevCard_Project\DevCard_MVC\obj\Debug\netcoreapp3.1\DevCard_MVC.MvcApplicationPartsAssemblyInfo.cache
 G:\PROJECT\.net core\DevCard\DevCard_Project\DevCard_MVC\obj\Debug\netcoreapp3.1\Razor\Views\Home\Contact.cshtml.g.cs
-G:\PROJECT\.net core\DevCard\DevCard_Project\DevCard_MVC\obj\Debug\netcoreapp3.1\Razor\Views\Home\Projects.cshtml.g.cs
+G:\PROJECT\.net core\DevCard\DevCard_Project\DevCard_MVC\obj\Debug\netcoreapp3.1\Razor\Views\Home\Components\Projects\_Projects.cshtml.g.cs
+G:\PROJECT\.net core\DevCard\DevCard_Project\DevCard_MVC\obj\Debug\netcoreapp3.1\Razor\Views\Home\Components\Articles\_Articles.cshtml.g.cs
