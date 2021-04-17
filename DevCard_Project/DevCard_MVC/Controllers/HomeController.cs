@@ -12,9 +12,13 @@ namespace DevCard_MVC.Controllers
 {
     public class HomeController : Controller
     {
-
-
-
+        private readonly List<Service> _services = new List<Service>
+        {
+            new Service(1,"نقره ای"),
+            new Service(2,"طلایی"),
+            new Service(3,"پلاتین"),
+             new Service(4,"الماس"),
+        };
 
         public IActionResult Index()
         {
@@ -24,15 +28,32 @@ namespace DevCard_MVC.Controllers
         [HttpGet]
         public IActionResult Contact()
         {
-            var model = new Contact();
+            var model = new Contact
+            {
+                Services = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(_services,"Id","Name")
+            };
             return View(model);
         }
 
         [HttpPost]
-        public JsonResult Contact(Contact form) 
+        public IActionResult Contact(Contact form)
         {
-            
-            return Json(Ok());
+            form.Services = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(_services, "Id", "Name");
+            if (!ModelState.IsValid)
+            {
+                ViewBag.error = "اطلاعات وارد شده معتبر نیست لطفا دوباره تلاش کنید";
+
+                return View(form);
+            }
+            // return RedirectToAction("Index");
+
+            ModelState.Clear();
+            form = new Contact
+            {
+                Services = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(_services, "Id", "Name")
+            };
+            ViewBag.success  = "پیام شما با موفقیت ثبت شد با تشکر.";
+            return View(form);
         }
 
         //[HttpPost]
